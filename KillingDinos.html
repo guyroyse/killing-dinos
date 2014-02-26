@@ -1,0 +1,69 @@
+<head>
+  <title>KillingDinos</title>
+</head>
+
+<body>
+  {{> header}}
+  {{> body}}
+</body>
+
+<template name="header">
+  <header>
+    <hgroup>
+      <h1>{{title}}</h1>
+      <h2>{{tagline}}</h2>
+    </hgroup>
+  </header>
+</template>
+
+<template name="body">
+  <section>
+    {{> dinos}}
+    {{> addDino}}
+    {{> hateAndDestroy}}
+  </section>
+</template>
+
+<template name="dinos">
+  <table>
+    <thead><tr>
+      <td class="dino">Name</td>
+      <td class="votes">Votes</td>
+    </tr></thead>
+    <tbody>
+      {{#each dinos}}
+        {{> dino}}
+      {{else}}
+        <tr><td>No dinosaurs found</td></tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="dino">
+  <tr class="{{selected}}">
+    <td class="dino">{{name}}</td>
+    <td class="votes">
+      {{#if votes}}
+        {{votes}}
+      {{else}}
+        0
+      {{/if}}
+    </td>
+  </tr>
+</template>
+
+<template name="addDino">
+  <div>
+    <input id="dinoToAdd" placeholder="Add a dino..." />
+    <input id="addDino" type="button" value="Add!" />
+  </div>
+</template>
+
+<template name="hateAndDestroy">
+  <div>
+    <input id="hate" type="button" value="Hate!" />
+    <input id="destroy" type="button" value="Send the Meteor!" />
+  </div>
+</template>
+

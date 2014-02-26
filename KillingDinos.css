@@ -1,0 +1,82 @@
+* {
+  margin: 0; 
+  padding: 0;
+  font: 12pt Verdana, sans-serif;
+}
+
+body {
+  background: #fffff5;
+  color: #330033;
+  width: 25em;
+  margin: 5em auto;
+}
+
+h1 {
+  font-size: 2.0em;
+  text-align: center;
+  margin-top: 1.0em;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+table {
+  font-size: 1.5em;
+  padding: 1.0em;
+  margin: 1.0em 0.0em;
+  background: #ddd;
+  width: 100%;
+  border-radius: 0.5em;
+  border-spacing: 0px;
+}
+
+th {
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 0.2em;
+}
+
+td {
+  padding: 0.2em;
+}
+
+tbody>tr {
+  cursor: pointer;
+}
+
+.dino {
+  text-align: left;
+}
+
+.votes {
+  text-align: right;
+}
+
+.selected {
+  background: #ffc;
+}
+
+input {
+  border-radius: 0.3em;
+  padding: 0.3em;
+  margin: 1.0em 0.0em;
+}
+
+input#dinoToAdd {
+  display: block;
+  width: 20em;
+  float: left;
+}
+
+input#addDino {
+  display: block;
+  width: 3em;
+  float: right;
+}
+
+div {
+  text-align: center;
+}
+
